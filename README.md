@@ -1,4 +1,5 @@
 take a look at the `diff` file for a ~patch of changes/overhead necessary for shifting from json encoding to gob encoding.
+that overhead in vim looks like `:%s/json/gob/g`... so one command :) 
 
 
 # results
