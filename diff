@@ -1,0 +1,19 @@
+ethan@vanitas:~/xmljson$ diff *encoded.go
+4c4
+<       "encoding/gob"
+---
+>       "encoding/json"
+10,11c10,11
+<       FirstName string `gob:"firstName"`
+<        LastName string `gob:"lastName"`
+---
+>       FirstName string `json:"firstName"`
+>        LastName string `json:"lastName"`
+15c15
+< E []Employee `gob:"employees"`
+---
+> E []Employee `json:"employees"`
+24c24
+<       err := gob.NewEncoder(os.Stdout).Encode(&e)
+---
+>       err := json.NewEncoder(os.Stdout).Encode(&e)
