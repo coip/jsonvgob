@@ -46,3 +46,8 @@ humans speak ~ASCII to an extent, and there is of-course value in human-readable
 but **TANSTAAFL**, and human-readable character encoding is perhaps unnecessary for the gophers.
 
 (id like to acknowledge regarding `encoding`/`transport`, i'm a fan of `protofbuf`/~`grpc`, and that would be a likely iteration candidate/better direction in lieu of gobs. but this is also a few minutes of thoughts to merely log the `json` v `gob` thing I think about from time to time.)
+
+pps
+
+iotas/typedef enumerations also make for a better ~dx in tangentially related cases when developing/consuming an SDK entirely within a go ~ecosystem.
+ie, enumerating Types of employees, then using the ~iota as the encoded key. much cheaper over the wire than string stuff. (read: firstnames above, if instead were employee-type, and say and example of that being "accounting". instead of encopding that attribute as "accounting", having a lib where ~`var AccountingEmployee Employee = iota + c`, which is then sent as ~`7`, say, over the wire. again, `7` instead of ~`accounting`, so ~10 iota payloads compared to the 1 string assuming 1 int is ~= 1 ascii char.
